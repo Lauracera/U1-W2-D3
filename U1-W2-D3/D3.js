@@ -115,13 +115,7 @@ const characters = []
   Dovrai accedere alla proprietà "name" di ogni oggetto in esso contenuto, e inserirla nell'array "characters" creato precedentemente.
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
-// for (let i = 0 ; i < starWarsCharacters.length ; i++ ) {
-//   const charactersName = starWarsCharacters[i]
-// console.log(charactersName.name);
-// console.log(characters)
-// console.log(characters.join(" - "));
-// // starWarsCharacters.push(charactersName.name)
-// } Non ho capito cosa è successo qui :)
+
 
 for (let i = 0 ; i < starWarsCharacters.length ; i++ ) {
   const nameCharacters = {
@@ -189,13 +183,25 @@ if (crewMass < 500) {
   console.log("Warning: Load is over 700")
 } else if (crewMass > 900) {
   console.log("Critical Load: over 900")
-} else if (crewMass > 1000) {
+} else  crewMass > 1000
+{
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!")
 }
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
+for ( i = 0; i < starWarsCharacters.length; i++ ){
+  if (starWarsCharacters[i].gender === "n/a") {
+    starWarsCharacters[i].gender = "robot"
+  }
+}
+
+console.log(starWarsCharacters)
+
+
+
+
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome.
